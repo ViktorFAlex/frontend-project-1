@@ -1,7 +1,8 @@
-install: # install dependencies
+install: 
 	npm ci
-publish: #publish packages
+publish: 
 	npm publish --dry-run
-brain-games: # start application
+brain-games: 
 	node bin/brain-games.js
-
+lint: 
+	npx eslint .
