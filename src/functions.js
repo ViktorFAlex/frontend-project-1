@@ -32,3 +32,16 @@ export const gcd = (expr) => {
   }
   return 1;
 };
+
+export const progression = (expr) => {
+  const arr = expr.split(' ');
+  const index = arr.indexOf('..');
+  switch (index) {
+    case 0:
+      return arr[1] - (arr[2] - arr[1]);
+    case 9:
+      return +arr[8] + (arr[8] - arr[7]);
+    default:
+      return (+arr[index - 1] + +arr[index + 1]) / 2;
+  }
+};
