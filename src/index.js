@@ -13,8 +13,7 @@ export const userName = greeting();
 
 export const getResult = (func, game) => {
   let count = 0;
-  let check = 'true';
-  while (count < 3 && check === 'true') {
+  while (count < 3) {
     const question = func();
     const answer = readlineSync.question(`Question: ${question} `);
     console.log(`Your answer: ${answer}`);
@@ -23,12 +22,9 @@ export const getResult = (func, game) => {
       console.log('Correct!');
       count += 1;
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.
 Let's try again, ${userName}!`);
-      check = 'false';
-    }
-    if (count === 3) {
-      console.log(`Congratulations, ${userName}!`);
     }
   }
+  return console.log(`Congratulations, ${userName}!`);
 };
