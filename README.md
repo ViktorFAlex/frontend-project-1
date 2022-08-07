@@ -10,7 +10,7 @@ Demonstration(brain-gcd): https://asciinema.org/a/513152
 Demonstration(brain-progression): https://asciinema.org/a/513159  
 Demonstration(brain-prime): https://asciinema.org/a/513165  
   
-###Description of project(Описание проекта):  
+### Description of project(Описание проекта):  
 Brain-games - small app for common math operations, presented as mini-games.  
 To install type "make install" and "npm link".  
 To play type any game you choose: "brain-calc/even, gcd, progression, prime".  
