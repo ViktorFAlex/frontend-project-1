@@ -4,7 +4,6 @@ import { calcTask } from '../src/gamequestions.js';
 
 export default () => {
   const calcQuestion = () => `${random10()} ${randomOperator()} ${random10()}`;
-
   calcTask();
   getResult(calcQuestion, calc);
 };
