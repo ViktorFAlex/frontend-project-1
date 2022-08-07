@@ -17,6 +17,7 @@ export const getResult = (func, game) => {
   while (count < 3 && check === 'true') {
     const question = func();
     const answer = readlineSync.question(`Question: ${question} `);
+    console.log(`Your answer: ${answer}`);
     const rightAnswer = String(game(question));
     if (answer === rightAnswer) {
       console.log('Correct!');
