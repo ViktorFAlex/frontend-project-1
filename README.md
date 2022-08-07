@@ -8,5 +8,18 @@ Demonstration(brain-even): https://asciinema.org/a/512825
 Demonstration(brain-calc): https://asciinema.org/a/513137  
 Demonstration(brain-gcd): https://asciinema.org/a/513152  
 Demonstration(brain-progression): https://asciinema.org/a/513159  
-Demonstration(brain-prime): https://asciinema.org/a/513165
+Demonstration(brain-prime): https://asciinema.org/a/513165  
+  
+##Description of project(Описание проекта):  
+Brain-games - small app for common math operations presented as mini-games.  
+To install type "make install" and "npm link".  
+To play type any game you choose: "brain-calc/even, gcd, progression, prime".  
+Demonstration you can find in asciinema examples above.  
+Have fun!  
+    
+Brain-games - маленькое приложение для вычисления простых математических операций, представленных в виде мини-игр.  
+Для установки введите "make install" и "npm link".  
+Для запуска игры выберите любую подходящую на ваш вкус: "brain-calc/even, gcd, progression, prime".  
+Демонстрации вы можете найти в asciinema примарах выше.   
+Успехов!
 
