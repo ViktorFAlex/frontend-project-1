@@ -1,7 +1,11 @@
 export const isEven = (num) => num % 2 === 0;
 
-export const random10 = Math.floor(Math.random() * 10 + 1);
-export const random100 = Math.floor(Math.random() * 100 + 1);
+export const random10 = () => Math.floor(Math.random() * 10 + 1);
+export const random100 = () => Math.floor(Math.random() * 100 + 1);
+export const randomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[Math.floor(Math.random() * 3)];
+};
 
 export const calc = (expr) => {
   const arr = expr.split(' ');
