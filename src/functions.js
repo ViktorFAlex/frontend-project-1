@@ -22,3 +22,13 @@ export const calc = (expr) => {
       return null;
   }
 };
+
+export const gcd = (expr) => {
+  const arr = expr.split(' ').sort((a, b) => a - b);
+  for (let i = arr[0]; i > 0; i -= 1) {
+    if (arr[0] % i === 0 && arr[1] % i === 0) {
+      return i;
+    }
+  }
+  return 1;
+};
