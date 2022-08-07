@@ -45,3 +45,13 @@ export const progression = (expr) => {
       return (+arr[index - 1] + +arr[index + 1]) / 2;
   }
 };
+
+export const isPrime = (num) => {
+  const start = Math.floor(num / 2);
+  for (let i = start; i > 1; i -= 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
+};

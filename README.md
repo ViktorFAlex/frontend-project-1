@@ -7,5 +7,6 @@
 Demonstration(brain-even): https://asciinema.org/a/512825  
 Demonstration(brain-calc): https://asciinema.org/a/513137  
 Demonstration(brain-gcd): https://asciinema.org/a/513152  
-Demonstration(brain-progression): https://asciinema.org/a/513159
+Demonstration(brain-progression): https://asciinema.org/a/513159  
+Demonstration(brain-prime): https://asciinema.org/a/513165
 
