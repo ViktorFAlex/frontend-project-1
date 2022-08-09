@@ -9,16 +9,15 @@ const greeting = () => {
   return user;
 };
 
-export const userName = greeting();
+const userName = greeting();
 
-export const getResult = (func, game) => {
+export default (func) => {
   let count = 0;
   while (count < 3) {
-    const question = func();
+    const [question, rightAnswer] = func();
     const answer = readlineSync.question(`Question: ${question} `);
     console.log(`Your answer: ${answer}`);
-    const rightAnswer = String(game(question));
-    if (answer === rightAnswer) {
+    if (answer === String(rightAnswer)) {
       console.log('Correct!');
       count += 1;
     } else {
