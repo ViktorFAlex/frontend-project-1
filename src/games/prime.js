@@ -1,5 +1,5 @@
-import getResult from '../index.js';
-import randomize from '../functions.js';
+import createGame from '../index.js';
+import { getRandomNumberFromOne } from '../getRandomNumber.js';
 
 const isPrime = (num) => {
   const start = Math.floor(num / 2);
@@ -12,13 +12,12 @@ const isPrime = (num) => {
 };
 
 const getIsPrimeTask = () => {
-  const num = randomize(100);
-  const question = `${num}`;
+  const num = getRandomNumberFromOne(100);
   const rightAnswer = isPrime(num) ? 'yes' : 'no';
-  return [question, rightAnswer];
+  return [`${num}`, rightAnswer];
 };
 
+const taskMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 export default () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  getResult(getIsPrimeTask);
+  createGame(getIsPrimeTask, taskMessage);
 };

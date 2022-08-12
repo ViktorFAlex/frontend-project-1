@@ -1,16 +1,15 @@
-import getResult from '../index.js';
-import randomize from '../functions.js';
+import createGame from '../index.js';
+import { getRandomNumberFromOne } from '../getRandomNumber.js';
 
 const isEven = (num) => num % 2 === 0;
 
 const getIsEvenTask = () => {
-  const num = randomize(100);
+  const num = getRandomNumberFromOne(100);
   const rightAnswer = isEven(num) ? 'yes' : 'no';
-  const question = `${num}`;
-  return [question, rightAnswer];
+  return [`${num}`, rightAnswer];
 };
 
+const taskMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
 export default () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  getResult(getIsEvenTask);
+  createGame(getIsEvenTask, taskMessage);
 };

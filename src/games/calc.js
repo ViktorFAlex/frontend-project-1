@@ -1,9 +1,9 @@
-import getResult from '../index.js';
-import randomize from '../functions.js';
+import createGame from '../index.js';
+import { getRandomNumber, getRandomNumberFromOne } from '../getRandomNumber.js';
 
 const randomizeOperator = () => {
   const operators = ['+', '-', '*'];
-  return operators[Math.floor(Math.random() * 3)];
+  return operators[getRandomNumber(operators.length)];
 };
 
 const calcResult = (num1, num2, operator) => {
@@ -18,17 +18,16 @@ const calcResult = (num1, num2, operator) => {
       throw new Error('Not appropriate operator');
   }
 };
+const taskMessage = 'What is the result of the expression?';
 
 const getCalcTask = () => {
-  const num1 = randomize(10);
-  const num2 = randomize(10);
+  const num1 = getRandomNumberFromOne(10);
+  const num2 = getRandomNumberFromOne(10);
   const operator = randomizeOperator();
-  const rightAnswer = calcResult(num1, num2, operator);
-  const question = `${num1} ${operator} ${num2}`;
-  return [question, rightAnswer];
+  const rightAnswer = String(calcResult(num1, num2, operator));
+  return [`${num1} ${operator} ${num2}`, rightAnswer];
 };
 
 export default () => {
-  console.log('What is the result of the expression?');
-  getResult(getCalcTask);
+  createGame(getCalcTask, taskMessage);
 };

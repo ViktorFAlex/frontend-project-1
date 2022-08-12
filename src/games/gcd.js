@@ -1,5 +1,5 @@
-import getResult from '../index.js';
-import randomize from '../functions.js';
+import createGame from '../index.js';
+import { getRandomNumberFromOne } from '../getRandomNumber.js';
 
 const findGcd = (num1, num2) => {
   const smallest = (num1 >= num2) ? num2 : num1;
@@ -12,14 +12,13 @@ const findGcd = (num1, num2) => {
 };
 
 const getGcdTask = () => {
-  const num1 = randomize(100);
-  const num2 = randomize(100);
-  const question = `${num1} ${num2}`;
-  const rightAnswer = findGcd(num1, num2);
-  return [question, rightAnswer];
+  const num1 = getRandomNumberFromOne(100);
+  const num2 = getRandomNumberFromOne(100);
+  const rightAnswer = String(findGcd(num1, num2));
+  return [`${num1} ${num2}`, rightAnswer];
 };
 
+const taskMessage = 'Find the greatest common divisor of given numbers';
 export default () => {
-  console.log('Find the greatest common divisor of given numbers.');
-  getResult(getGcdTask);
+  createGame(getGcdTask, taskMessage);
 };
