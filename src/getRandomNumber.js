@@ -1,2 +1,1 @@
-export const getRandomNumberFromOne = (num) => Math.floor(Math.random() * num + 1);
-export const getRandomNumber = (num) => Math.floor(Math.random() * num);
+export default (num, start = 0) => Math.floor(Math.random() * num + start);

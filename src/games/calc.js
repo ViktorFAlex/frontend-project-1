@@ -1,5 +1,5 @@
 import createGame from '../index.js';
-import { getRandomNumber, getRandomNumberFromOne } from '../getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const randomizeOperator = () => {
   const operators = ['+', '-', '*'];
@@ -21,8 +21,8 @@ const calcResult = (num1, num2, operator) => {
 const taskMessage = 'What is the result of the expression?';
 
 const getCalcTask = () => {
-  const num1 = getRandomNumberFromOne(10);
-  const num2 = getRandomNumberFromOne(10);
+  const num1 = getRandomNumber(10, 1);
+  const num2 = getRandomNumber(10, 1);
   const operator = randomizeOperator();
   const rightAnswer = String(calcResult(num1, num2, operator));
   return [`${num1} ${operator} ${num2}`, rightAnswer];

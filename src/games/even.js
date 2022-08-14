@@ -1,10 +1,10 @@
 import createGame from '../index.js';
-import { getRandomNumberFromOne } from '../getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const isEven = (num) => num % 2 === 0;
 
 const getIsEvenTask = () => {
-  const num = getRandomNumberFromOne(100);
+  const num = getRandomNumber(100, 1);
   const rightAnswer = isEven(num) ? 'yes' : 'no';
   return [`${num}`, rightAnswer];
 };

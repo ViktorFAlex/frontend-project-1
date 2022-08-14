@@ -1,5 +1,5 @@
 import createGame from '../index.js';
-import { getRandomNumberFromOne } from '../getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const findGcd = (num1, num2) => {
   const smallest = (num1 >= num2) ? num2 : num1;
@@ -12,8 +12,8 @@ const findGcd = (num1, num2) => {
 };
 
 const getGcdTask = () => {
-  const num1 = getRandomNumberFromOne(100);
-  const num2 = getRandomNumberFromOne(100);
+  const num1 = getRandomNumber(100, 1);
+  const num2 = getRandomNumber(100, 1);
   const rightAnswer = String(findGcd(num1, num2));
   return [`${num1} ${num2}`, rightAnswer];
 };

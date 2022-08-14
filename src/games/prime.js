@@ -1,5 +1,5 @@
 import createGame from '../index.js';
-import { getRandomNumberFromOne } from '../getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const isPrime = (num) => {
   const start = Math.floor(num / 2);
@@ -12,7 +12,7 @@ const isPrime = (num) => {
 };
 
 const getIsPrimeTask = () => {
-  const num = getRandomNumberFromOne(100);
+  const num = getRandomNumber(100, 1);
   const rightAnswer = isPrime(num) ? 'yes' : 'no';
   return [`${num}`, rightAnswer];
 };
