@@ -2,12 +2,17 @@ import createGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
 const getProgressionDirection = () => (Math.round(Math.random()) ? 1 : -1);
-const progressionElemsCount = 10;
-const createProgression = () => {
-  const progression = [];
-  const start = getRandomNumber(10);
+
+const getProgressionSpreading = () => {
   const step = getRandomNumber(10, 1) * (getProgressionDirection());
-  for (let i = 1; i <= progressionElemsCount; i += 1) {
+  const start = getRandomNumber(10);
+  return [start, step];
+};
+
+const createProgression = (elemsCount = 10) => {
+  const [start, step] = getProgressionSpreading();
+  const progression = [];
+  for (let i = 0; i < elemsCount; i += 1) {
     progression.push(start + step * i);
   }
   return progression;
@@ -15,7 +20,7 @@ const createProgression = () => {
 
 const getProgressionTask = () => {
   const progression = createProgression();
-  const missingNumberIndex = getRandomNumber(progression.length);
+  const missingNumberIndex = getRandomNumber(progression.length, 0);
   const rightAnswer = String(progression[missingNumberIndex]);
   progression[missingNumberIndex] = '..';
   const question = progression.join(' ');
