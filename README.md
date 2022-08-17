@@ -20,7 +20,7 @@ To play type any game you choose: "brain-calc/even, gcd, progression, prime".
 Demonstration you can find in asciinema examples above.  
 Have fun!  
 
-###Описание проекта:
+### Описание проекта:
 Brain-games - маленькое приложение для вычисления простых математических операций, представленных в виде мини-игр.  
 #### Инструкция по установке:
 Для установки введите "make install".
