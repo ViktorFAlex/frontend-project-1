@@ -1,7 +1,7 @@
 import getRandomNumber from './getRandomNumber.js';
 
-export default (predicate) => {
+export default (predicateFunction) => {
   const num = getRandomNumber(100, 1);
-  const rightAnswer = predicate(num) ? 'yes' : 'no';
+  const rightAnswer = predicateFunction(num) ? 'yes' : 'no';
   return [`${num}`, rightAnswer];
 };

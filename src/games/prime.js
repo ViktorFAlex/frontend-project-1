@@ -1,5 +1,5 @@
 import createGame from '../index.js';
-import getTaskFromPredicate from '../getTaskFromPredicate.js';
+import getTaskFromPredicateFunction from '../getTaskFromPredicateFunction.js';
 
 const isPrime = (num) => {
   const start = Math.floor(num / 2);
@@ -11,7 +11,7 @@ const isPrime = (num) => {
   return true;
 };
 
-const getIsPrimeTask = () => getTaskFromPredicate(isPrime);
+const getIsPrimeTask = () => getTaskFromPredicateFunction(isPrime);
 
 const taskMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 export default () => {
