@@ -6,6 +6,8 @@
 
 <a href="https://codeclimate.com/github/ViktorFAlex/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/3b963df8523b358d35c9/maintainability" /></a>
 
+#### Preview:
+![preview](https://github.com/ViktorFAlex/projects-previews/blob/main/Brain-games.gif)
 #### Gameplay demonstrations:
 Demonstration(brain-even): https://asciinema.org/a/512825  
 Demonstration(brain-calc): https://asciinema.org/a/513137  
@@ -20,7 +22,7 @@ To install type "make install".
 #### Launch Guide:
 To play type any game you choose: "brain-calc/even, gcd, progression, prime".  
 Demonstration you can find in asciinema examples above.  
-Have fun!  
+Enjoy!  
 
 ## Описание проекта:
 Brain-games - маленькое приложение для вычисления простых математических операций, представленных в виде мини-игр.  
